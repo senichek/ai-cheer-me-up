@@ -1,38 +1,89 @@
-.App {
+.container {
+  max-width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #191a1e;
+  overflow: hidden;
+}
+
+.main-img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
   text-align: center;
+  color: aliceblue;
+  text-transform: uppercase;
+  letter-spacing: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.train-icon {
+  color: antiquewhite;
+  text-align: center;
+  transform: scale(2);
+  margin-top: -42px;
+  margin-bottom: 16px;
+  transition: 700ms;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.train-icon:hover {
+  transform: scale(2.5);
+  cursor: pointer;
+}
+
+.message {
+  width: 25%;
+  text-align: right;
+  color: antiquewhite;
+  position: absolute;
+  top: 10px;
+  right: 21%;
+}
+
+/* Extra large devices (large desktops, 1200px and below) */
+@media (max-width: 1200px) {
+  /* CSS for extra large devices */
+  /* .main-img {
+    width: 60%;
+  } */
+
+  .message {
+    right: 21%;
+    font-size: 16px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Large devices (desktops, 992px and below) */
+@media (max-width: 992px) {
+  /* CSS for large devices */
+  .message {
+    font-size: 13px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .train-icon {
+    transform: scale(1.2);
+  }
+
+  .train-icon:hover {
+    transform: scale(1.5);
+  }
+}
+
+@media (max-width: 768px) {
+  /* CSS for medium devices */
+  .message {
+    font-size: 12px;
+  }
+
+  .train-icon {
+    transform: scale(1.2);
+  }
+
+  .train-icon:hover {
+    transform: scale(1.5);
   }
 }
