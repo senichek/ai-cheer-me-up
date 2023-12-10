@@ -4,7 +4,7 @@ import boto3
 def getAiResponse():
     brt = boto3.client(service_name='bedrock-runtime', region_name='us-east-1')
 
-    prompt = "Say something inspiring using the quotes of the famous people, movies, songs but the sentence you provide should not exceed 20 words."
+    prompt = "Provide one fact about the trains but the sentence you provide should not exceed 15 words."
 
     body = json.dumps({
         "prompt": prompt, 
